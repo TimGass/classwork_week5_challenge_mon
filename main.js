@@ -9,15 +9,15 @@ function addHobby(hobby){
   $.post(url, {hobby:hobby.toString()}, function(data){
     console.log(data);
   });
-}
+};
 
 function getHobbies(){
-  $.getJSON(url, function(data){
+  $.getJSON(url).done(function(data){
     data.forEach(function(item){
       console.log(item);
     });
   });
-}
+};
 
 addHobby("basketball");
 getHobbies();
