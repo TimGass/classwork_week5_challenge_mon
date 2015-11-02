@@ -6,7 +6,7 @@ var url = 'http://tiny-starburst.herokuapp.com/collections/TimGass';
 
 
 function addHobby(hobby){
-  $.post(url, {hobby:hobby.toString()}).done(function(data){
+  $.post(url, {hobby:hobby.toString(), created: Date.now()}).done(function(data){
     console.log(data);
   });
 };
